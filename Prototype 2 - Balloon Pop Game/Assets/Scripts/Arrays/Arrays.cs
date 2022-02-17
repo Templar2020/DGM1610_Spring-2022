@@ -22,6 +22,6 @@ public class Arrays : MonoBehaviour
        {
            print(numbers);
        }
-    }s
+    }
    
 }
