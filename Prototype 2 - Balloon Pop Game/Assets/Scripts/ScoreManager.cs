@@ -13,17 +13,18 @@ public class ScoreManager : MonoBehaviour
     {
        UpdateScoreText(); 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     public void IncreaseScoreText(int amount)
     {
         score += amount;
         UpdateScoreText();
     }
+    public void DecreaseScoreText(int amount)
+    {
+        score -= amount;
+        UpdateScoreText();
+    }
+
     public void UpdateScoreText()
     {
         scoreText.text = "Score: "+ score;
