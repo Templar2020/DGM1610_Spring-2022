@@ -24,13 +24,7 @@ public class SimpleCalc : MonoBehaviour
         Div();
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     void Add()
     {
         int total;
