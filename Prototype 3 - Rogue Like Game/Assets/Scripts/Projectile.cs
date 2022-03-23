@@ -10,6 +10,8 @@ public class Projectile : MonoBehaviour
 
     private Vector2 target;
 
+    public int damage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,7 @@ public class Projectile : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             DestroyProjectile();
+            player.TakeDamage(damage);
         }
     }
 
