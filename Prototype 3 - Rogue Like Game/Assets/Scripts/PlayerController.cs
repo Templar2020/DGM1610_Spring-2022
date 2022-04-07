@@ -19,11 +19,17 @@ public class PlayerController : MonoBehaviour
 
 
     [Header("Player Combat")]
-     public int damage; // Damage amount dealt to enemy
+    public int damage; // Damage amount dealt to enemy
     public float attackRange; // Range at which the player can attack
     public float attackRate;
     private float lastAttackTime;   
     public LayerMask enemyLayer;
+
+
+    [Header("Inventory")]
+    public int key;
+    public int coins;
+    public int gems;
 
 
     // Start is called before the first frame update
