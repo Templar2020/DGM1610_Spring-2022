@@ -17,12 +17,17 @@ public class PlayerController : MonoBehaviour
 
     private float moveVelocity;
 
+    public AudioClip marker;
+    
+    private AudioSource source;
 
     // Start is called before the first frame update
     void Start()
     {
        isGrounded = true;
        rb = GetComponent<Rigidbody2D>();
+
+       source = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -54,5 +59,7 @@ public class PlayerController : MonoBehaviour
     public void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+        source.PlayOneShot(marker, 1.0f);
     }
+
 }
